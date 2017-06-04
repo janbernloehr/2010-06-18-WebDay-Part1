@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebDay.Contracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebDay.Contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/WebDay.WcfService/BlogRepositoryService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="BlogPost">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateCreated" type="xs:dateTime" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Tags" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlogPost" nillable="true" type="tns:BlogPost" />
+  <xs:complexType name="ArrayOfBlogPost">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BlogPost" nillable="true" type="tns:BlogPost" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBlogPost" nillable="true" type="tns:ArrayOfBlogPost" />
+  <xs:complexType name="ArrayOfTagCloudItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TagCloudItem" nillable="true" type="tns:TagCloudItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTagCloudItem" nillable="true" type="tns:ArrayOfTagCloudItem" />
+  <xs:complexType name="TagCloudItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TagCloudItem" nillable="true" type="tns:TagCloudItem" />
+</xs:schema>

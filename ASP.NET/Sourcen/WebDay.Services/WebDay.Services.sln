@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDay.Contracts", "WebDay.Contracts\WebDay.Contracts.csproj", "{B8A6C8D3-9A9E-467C-8CC3-9B97B5306C8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDay.Repository", "WebDay.Repository\WebDay.Repository.csproj", "{9B40ECF1-07EC-47D5-96CE-DC676B45B869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDay.WcfService", "WebDay.WcfService\WebDay.WcfService.csproj", "{D8CE04F6-A56F-49FB-AF7E-0902B0AF8E6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8A6C8D3-9A9E-467C-8CC3-9B97B5306C8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A6C8D3-9A9E-467C-8CC3-9B97B5306C8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8A6C8D3-9A9E-467C-8CC3-9B97B5306C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8A6C8D3-9A9E-467C-8CC3-9B97B5306C8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B40ECF1-07EC-47D5-96CE-DC676B45B869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B40ECF1-07EC-47D5-96CE-DC676B45B869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B40ECF1-07EC-47D5-96CE-DC676B45B869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B40ECF1-07EC-47D5-96CE-DC676B45B869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8CE04F6-A56F-49FB-AF7E-0902B0AF8E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8CE04F6-A56F-49FB-AF7E-0902B0AF8E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8CE04F6-A56F-49FB-AF7E-0902B0AF8E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8CE04F6-A56F-49FB-AF7E-0902B0AF8E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

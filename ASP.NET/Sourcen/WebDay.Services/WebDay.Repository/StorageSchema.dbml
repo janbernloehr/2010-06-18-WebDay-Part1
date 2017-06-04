@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WebDayBlog" EntityNamespace="WebDay.Entities" Class="StorageDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=WebDayBlog;Integrated Security=True" SettingsObjectName="WebDay.Repository.Properties.Settings" SettingsPropertyName="WebDayBlogConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Posts" Member="Posts">
+    <Type Name="Post">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Post_PostTagMapping" Member="PostTagMappings" ThisKey="Id" OtherKey="PostId" Type="PostTagMapping" />
+      <Association Name="Post_Comment" Member="Comments" ThisKey="Id" OtherKey="PostId" Type="Comment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tags" Member="Tags">
+    <Type Name="Tag">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Association Name="Tag_PostTagMapping" Member="PostTagMappings" ThisKey="Id" OtherKey="TagId" Type="PostTagMapping" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PostTagMappings" Member="PostTagMappings">
+    <Type Name="PostTagMapping">
+      <Column Name="PostId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TagId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Post_PostTagMapping" Member="Post" ThisKey="PostId" OtherKey="Id" Type="Post" IsForeignKey="true" />
+      <Association Name="Tag_PostTagMapping" Member="Tag" ThisKey="TagId" OtherKey="Id" Type="Tag" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comments" Member="Comments">
+    <Type Name="Comment">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PostId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Member="Comment1" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Post_Comment" Member="Post" ThisKey="PostId" OtherKey="Id" Type="Post" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.EnsureTag" Method="EnsureTag">
+    <Parameter Name="TagTitle" Parameter="tagTitle" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

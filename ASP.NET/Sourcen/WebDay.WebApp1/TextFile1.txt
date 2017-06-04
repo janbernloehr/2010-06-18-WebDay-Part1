@@ -1,0 +1,61 @@
+﻿<asp:Repeater runat="server" DataSourceID="PostSource">
+            <ItemTemplate>
+                <div class="post-header">
+                    <div class="title">
+                        <%#Eval("Title") %>
+                    </div>
+                    <div class="info">
+                        <%#Eval("Username") %>
+                        schreib am
+                        <%#Eval("DateCreated") %>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+                <div class="post-content">
+                    <%#Eval("Content") %>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
+
+
+
+		<asp:ObjectDataSource ID="PostSource" runat="server" SelectMethod="GetRecentPosts"
+            TypeName="WebDay.WebApp1.RepositoryServiceReference.BlogRepositoryClient">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="20" Name="maxCount" Type="Int32" />
+            </SelectParameters>
+        </asp:ObjectDataSource>
+
+
+
+		<div class="error">
+        <asp:ValidationSummary runat="server" HeaderText="Es sind Fehler aufgetreten" />
+    </div>
+    <div>
+        <asp:Label runat="server" AssociatedControlID="TitleBox" Text="Betreff" />
+        <asp:TextBox runat="server" ID="TitleBox" Width="94%" />
+        <asp:RequiredFieldValidator runat="server" ControlToValidate="TitleBox" ErrorMessage="Betreff ist erforderlich"
+            Text="*" />
+    </div>
+    <div>
+        <asp:TextBox runat="server" ID="ContentBox" TextMode="MultiLine" Rows="16" Width="100%" />
+    </div>
+    <div style="text-align: right;">
+        <asp:Button runat="server" ID="PublishButton" Text="Veröffentlichen" OnClick="PublishButton_Click" />
+        <asp:Button runat="server" ID="CancelButton" Text="Abbrechen" OnClick="CancelButton_Click"
+            CausesValidation="false" />
+    </div>
+
+
+	var client = new RepositoryServiceReference.BlogRepositoryClient();
+
+            var post = new RepositoryServiceReference.BlogPost()
+            {
+                Title = this.TitleBox.Text,
+                Content = this.ContentBox.Text,
+                DateCreated = DateTime.Now,
+                Username = User.Identity.Name
+            };
+
+            client.PublishPost(post);

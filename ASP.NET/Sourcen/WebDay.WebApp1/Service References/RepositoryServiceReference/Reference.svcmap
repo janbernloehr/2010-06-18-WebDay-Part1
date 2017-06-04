@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bf413da7-02a7-4267-80ba-a534c6797516" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/WebDay.WcfService/BlogRepositoryService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BlogRepositoryService.wsdl" MetadataType="Wsdl" ID="1bafa1dd-ad9d-4cc1-8b1a-6886d082ea7e" SourceId="1" SourceUrl="http://localhost/WebDay.WcfService/BlogRepositoryService.svc?wsdl" />
+    <MetadataFile FileName="BlogRepositoryService.xsd" MetadataType="Schema" ID="cecb29bf-9a53-47f6-8bde-089a94d7e189" SourceId="1" SourceUrl="http://localhost/WebDay.WcfService/BlogRepositoryService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BlogRepositoryService1.xsd" MetadataType="Schema" ID="d238de71-8d6f-44d4-b7d1-c30e89a85a1a" SourceId="1" SourceUrl="http://localhost/WebDay.WcfService/BlogRepositoryService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BlogRepositoryService2.xsd" MetadataType="Schema" ID="148c17fc-1068-4430-b24a-bcc997a38d27" SourceId="1" SourceUrl="http://localhost/WebDay.WcfService/BlogRepositoryService.svc?xsd=xsd3" />
+    <MetadataFile FileName="BlogRepositoryService3.xsd" MetadataType="Schema" ID="d58b91a5-5ca4-47a6-8633-63af34087263" SourceId="1" SourceUrl="http://localhost/WebDay.WcfService/BlogRepositoryService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BlogRepositoryService.disco" MetadataType="Disco" ID="b5b96e0a-547e-4a11-a8f5-f2de7527bd31" SourceId="1" SourceUrl="http://localhost/WebDay.WcfService/BlogRepositoryService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

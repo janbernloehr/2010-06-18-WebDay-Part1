@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/StorageDataContext" />
+  <nestedChildShapes>
+    <classShape Id="413cfea9-5149-45ce-9e15-5b3bc006365b" absoluteBounds="0.75, 4, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/StorageDataContext/Post" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e56e6e7d-203c-4822-ba06-124afa7fbb8c" absoluteBounds="0.765, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="43de11ad-2519-49c3-996e-4337495236d8" absoluteBounds="0.75, 0.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/StorageDataContext/Tag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9bbb655d-721c-41a1-b69a-0b1b648011c2" absoluteBounds="0.765, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bc99b992-6acf-45a3-b8b0-91c20a66c125" absoluteBounds="3.5, 0.875, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/StorageDataContext/PostTagMapping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b6eab4aa-aa4c-48ad-8c23-6a1be8ad262d" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.88544840494792); (4.5 : 4.88544840494792); (4.5 : 2.06899251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/StorageDataContext/Post/Post_PostTagMapping" />
+      <nodes>
+        <classShapeMoniker Id="413cfea9-5149-45ce-9e15-5b3bc006365b" />
+        <classShapeMoniker Id="bc99b992-6acf-45a3-b8b0-91c20a66c125" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.47199625651042); (3.5 : 1.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StorageDataContext/Tag/Tag_PostTagMapping" />
+      <nodes>
+        <classShapeMoniker Id="43de11ad-2519-49c3-996e-4337495236d8" />
+        <classShapeMoniker Id="bc99b992-6acf-45a3-b8b0-91c20a66c125" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="554fd840-9dde-4658-a107-d2594fffd161" absoluteBounds="7.25, 1.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/StorageDataContext/Comment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="120df928-2cd9-4cff-8309-0bf4122d8e53" absoluteBounds="7.265, 1.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.41147170247396); (4.41666666666667 : 4.41147170247396 : JumpStart); (4.58333333333333 : 4.41147170247396 : JumpEnd); (8.25 : 4.41147170247396); (8.25 : 3.14589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StorageDataContext/Post/Post_Comment" />
+      <nodes>
+        <classShapeMoniker Id="413cfea9-5149-45ce-9e15-5b3bc006365b" />
+        <classShapeMoniker Id="554fd840-9dde-4658-a107-d2594fffd161" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
